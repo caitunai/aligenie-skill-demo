@@ -1,0 +1,1 @@
+<div class="x-button" onClick="buttonClick">{{text}}</div>

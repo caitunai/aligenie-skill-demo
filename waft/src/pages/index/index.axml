@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <lottie
+      a:if="{{lottie}}"
+      class="lottie"
+      id="myLottie"
+      autoPlay="{{autoPlay}}"
+      path="{{path}}"
+      repeatCount="{{repeatCount}}"
+    >
+    </lottie>
+    <lottie
+      a:if="{{lottie}}"
+      class="lottie"
+      id="myLottie"
+      autoPlay="{{autoPlay}}"
+      path="{{path1}}"
+      repeatCount="{{repeatCount}}"
+    >
+    </lottie>
+</div>

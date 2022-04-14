@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "x-text":"components/x-text/x-text"
+  },
+  "mockData":{
+    "dataSource":{
+      "desc": "powered by waft"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="warpper">
+  <image class="img" src="http://gw.alicdn.com/imgextra/i4/O1CN01KoLIjy1xrDXBCZMUK_!!6000000006496-2-tps-424-424.png"/>
+  <div class="bottom">
+    <div class="text">
+      <text class="hello-font">HELLO WORLD</text>
+      <x-text a:if="{{desc}}" value="{{desc}}"/>
+    </div>
+  </div>
+</div>

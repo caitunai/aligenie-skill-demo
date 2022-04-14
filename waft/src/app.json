@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/waft-index/waft-index"
+  ],
+  "cards": [
+    "cards/index/index"
+  ],
+  "default": "pages/index/index",
+  "window": {
+    "defaultTitle": "Waft Hello World"
+  },
+  "viewport":{
+    "width": 1024,
+    "height": 600,
+    "scaleMode": "fixedHeight"
+  }
+}

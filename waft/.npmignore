@@ -1,0 +1,7 @@
+assembly/
+build/
+scripts/
+scratch/
+node_modules/
+.waft/
+CHANGELOG.md

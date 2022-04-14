@@ -1,0 +1,25 @@
+{
+  "name":"waft",
+  "version": "0.7.3",
+  "description": "waft project example",
+  "scripts": {
+    "start": "waft start",
+    "build": "waft build",
+    "dev": "waft build --watch --push",
+    "release": "waft build --release",
+    "push": "waft push"
+  },
+  "author": "aligenie-skill",
+  "license": "MIT",
+  "dependencies": {
+    "waft": "^0.7.x",
+    "waft-json": "^1.1.10"
+  },
+  "devDependencies": {
+    "@as-pect/cli": "^6.0.0", 
+    "eslint": "^7.17.0",
+    "eslint-config-waft":"^1.0.0",
+    "waft-cli": "^0.7.x",
+    "waft-css-lint": "^1.1.0"
+  }
+}

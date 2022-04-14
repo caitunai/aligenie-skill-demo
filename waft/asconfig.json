@@ -1,0 +1,9 @@
+{
+  "outAssembly": true,
+  "output": "../build",
+  "baseDir": "./src",
+  "mode": "dev",
+  "optimizeLevel": 0,
+  "shrinkLevel": 0,
+  "measure":true
+}

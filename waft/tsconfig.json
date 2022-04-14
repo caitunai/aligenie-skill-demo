@@ -1,0 +1,6 @@
+{
+  "extends": "waft/tsconfig.json",
+  "include": [
+    "./**/*.ts",
+  ]
+}

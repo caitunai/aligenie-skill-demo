@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "props":{
+    "value": ""
+  },
+  "state":{
+    "value": ""
+  }
+}

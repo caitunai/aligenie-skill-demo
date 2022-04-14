@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "x-text":"components/x-text/x-text",
+    "x-button":"components/x-button/x-button"
+  },
+  "state":{
+    "desc": "",
+    "percent": 20
+  }
+}

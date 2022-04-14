@@ -1,0 +1,17 @@
+logs/
+npm-debug.log
+node_modules/
+coverage/
+scratch/
+.idea/
+run/
+.DS_Store
+*.swp
+.nyc_output
+.run_cache
+build/
+scripts/
+*.map
+assembly/
+build/
+.waft/

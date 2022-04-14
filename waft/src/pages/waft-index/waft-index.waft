@@ -1,0 +1,99 @@
+<style>
+.warpper {
+  background-color:rgb(50, 51, 56);
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img{
+  width: 400rpx;
+  height: 400rpx;
+}
+.bottom{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.text{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  background-color: rgb(82, 142,219);
+  color: white;
+  width: 66rpx;
+  height: 66rpx;
+  font-size: 40rpx;
+  border-radius: 14rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<template>
+  <div class="warpper">
+    <image class="img" src="http://gw.alicdn.com/imgextra/i4/O1CN01KoLIjy1xrDXBCZMUK_!!6000000006496-2-tps-424-424.png"/>
+    <div class="bottom">
+      <div class="button" onTap="minus">-</div>
+      <div class="text">
+        <text class="hello-font">HELLO WORLD ... {{percent ? percent : ""}}</text>
+        <x-text a:if="{{desc}}" value="{{desc}}"/>
+      </div>
+      <div class="button" onTap="plus">+</div>
+    </div>
+  </div>
+</template>
+<script>
+import { JSON, JSONObject } from "waft-json";
+import { console, getDataSource, FunctionPage, Props, Event, MessageEvent } from "waft";
+
+// 支持function写法
+let _page: FunctionPage;
+export function Index(page: FunctionPage): void{
+  _page = page;
+  // 设置默认的state
+  page.setState(getDataSource());
+  // 添加监听事件
+  page.addEventListener("plus", (event: Event)=>{
+    const percent = _page.state.getInteger("percent");
+    _page.setState(JSON.parseObject(`{"percent": ${(percent+1).toString()}}`));
+  });
+  page.addEventListener("minus", (event: Event)=>{
+    const percent = _page.state.getInteger("percent");
+    _page.setState(JSON.parseObject(`{"percent": ${(percent-1).toString()}}`));
+  });
+  page.onshow = (): void =>{
+    // 页面显示
+    console.log('page onShow');
+  }
+  page.onload = (query: JSONObject): void=>{
+    // 页面加载后
+    console.log('page onLoad:' + JSON.stringify(query));
+  }
+  page.onmessage = (event: MessageEvent): void=>{
+    // 信息推送更新
+    console.log('page onMessage:' + JSON.stringify(event.data));
+    // 如果需要进行更新界面
+    if(event.data.has("dataSource")){
+      _page.setState(event.data.getObject("dataSource"));
+    }
+  }
+}
+</script>
+<json>
+  {
+    "usingComponents": {
+      "x-text":"components/x-text/x-text"
+    },
+    "state":{
+      "percent": 20
+    }
+  }
+</json>

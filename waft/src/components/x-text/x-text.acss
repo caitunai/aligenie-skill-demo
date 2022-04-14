@@ -1,0 +1,5 @@
+.x-text {
+  color: lightblue;
+  font-size: 20rpx;
+  transform: translateX(130rpx);
+}

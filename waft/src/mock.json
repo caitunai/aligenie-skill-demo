@@ -1,0 +1,8 @@
+{
+  "query":{
+  },
+  "dataSource":{
+    "desc": "powered by waft",
+    "percent": 42
+  }
+}
